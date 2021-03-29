@@ -3,13 +3,11 @@ import {useState, useEffect} from "react";
 
 function getCardLevels(playerInfo) {
     const cardDict = [];
-    console.log(playerInfo["cards"]);
     var i;
     for(i=0; i < playerInfo["cards"].length; i++) {
         var currentCard = playerInfo["cards"][i];
         cardDict[currentCard["name"]] = currentCard["level"];
     }
-    console.log(cardDict);
     return cardDict;
 }
 
